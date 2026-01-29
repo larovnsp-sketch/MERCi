@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kinezio – услуги кинезиолога</title>
-
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      background-color: #f7f7f7; /* светлее фон */
       color: #333;
     }
 
@@ -21,11 +20,11 @@
     }
 
     header h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-size: 2.5rem;
+      font-weight: bold;
       margin: 0;
-      transform: scaleY(0.8); /* буквы ниже на 20% */
+      letter-spacing: 2px;
+      transform: scaleY(0.8); /* уменьшение высоты букв на 20% */
     }
 
     nav {
@@ -37,49 +36,47 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd54f;
     }
 
     section {
       max-width: 900px;
       margin: 50px auto;
-      padding: 25px;
+      padding: 20px;
       background: white;
-      border-radius: 14px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    h2 {
+    section h2 {
       color: #004d40;
       margin-bottom: 15px;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin: 8px 0;
-    }
-
-    .price {
-      font-size: 1.6rem;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-
-    .whatsapp-btn {
-      display: inline-block;
-      padding: 14px 26px;
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
+    .services p {
+      line-height: 1.6;
       font-size: 1.1rem;
-      font-weight: bold;
     }
 
-    .whatsapp-btn:hover {
-      background-color: #1ebd5a;
+    .prices ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    .prices li {
+      margin: 10px 0;
+      padding: 10px;
+      background: #e0f2f1;
+      border-radius: 8px;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
     }
 
     footer {
@@ -88,66 +85,54 @@
       background-color: #004d40;
       color: white;
       margin-top: 40px;
-      font-size: 0.9rem;
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Kinezio</h1>
-  <nav>
-    <a href="#services">Услуги</a>
-    <a href="#prices">Цены</a>
-    <a href="#contacts">Контакты</a>
-  </nav>
-</header>
+  <header>
+    <h1>Kinezio</h1>
+    <nav>
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
 
-<section id="services">
-  <h2>Услуги</h2>
+  <section id="services" class="services">
+    <h2>Услуги</h2>
+    <p>
+      Этот метод помогает не только <b>устранить боль</b>, но и вернуть
+      <b>энергию и жизненную силу</b>.
+    </p>
+    <p>Это концентрация лучших практик:</p>
+    <ul>
+      <li>Прикладной кинезиологии</li>
+      <li>Рефлексотерапии</li>
+      <li>Восточной медицины</li>
+      <li>Остеопатии</li>
+      <li>Мануальной терапии</li>
+    </ul>
+    <p>
+      Метод <b>MERCI</b> — работа с <b>эмоциональными и подсознательными блоками</b>.
+    </p>
+  </section>
 
-  <p>
-    Этот метод помогает не только <strong>устранить боль</strong>,
-    но и вернуть <strong>энергию и жизненную силу</strong>.
-  </p>
+  <section id="prices" class="prices">
+    <h2>Цены</h2>
+    <ul>
+      <li>Разовая сессия — 50 €</li>
+    </ul>
+  </section>
 
-  <p>Это концентрация лучших практик:</p>
+  <section id="contact" class="contact">
+    <h2>Контакты</h2>
+    <p>WhatsApp: <a href="https://wa.me/3463214713" target="_blank">+34 632 147 13</a></p>
+  </section>
 
-  <ul>
-    <li>Прикладной кинезиологии</li>
-    <li>Рефлексотерапии</li>
-    <li>Восточной медицины</li>
-    <li>Остеопатии</li>
-    <li>Мануальной терапии</li>
-  </ul>
-
-  <p>
-    <strong>MERCI</strong> — работа с эмоциональными и подсознательными блоками.
-  </p>
-</section>
-
-<section id="prices">
-  <h2>Цены</h2>
-
-  <div class="price">
-    Разовая сессия — 50 €
-  </div>
-
-  <a class="whatsapp-btn" href="https://wa.me/3463214713" target="_blank">
-    Записаться в WhatsApp
-  </a>
-</section>
-
-<section id="contacts">
-  <h2>Контакты</h2>
-  <p>Связь и запись через WhatsApp:</p>
-  <p><strong>+34 632 147 13</strong></p>
-</section>
-
-<footer>
-  © 2025 Kinezio
-</footer>
+  <footer>
+    <p>Kinezio © 2025</p>
+  </footer>
 
 </body>
 </html>
