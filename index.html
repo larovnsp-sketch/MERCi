@@ -1,214 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KINEZIO-I — услуги кинезиолога</title>
-    <meta name="description" content="KINEZIO-I — прикладная кинезиология и метод MERCi. Онлайн и офлайн (Барселона). Запишитесь на консультацию и живите без боли." />
-    <link rel="icon" href="logo.png" type="image/png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        html { scroll-behavior: smooth; }
-        /* Теперь весь сайт использует шрифт Montserrat */
-        body { font-family: 'Montserrat', sans-serif; background-color: #1A2031; color: #fff; }
-        
-        /* Применяем уменьшенную высоту ко всем "золотым" элементам */
-        .gold {
-            color: #CBA135;
-            /* Уменьшаем сжатие по вертикали, чтобы текст был выше */
-            transform: scaleY(0.85);
-            display: inline-block;
-        }
-        .btn { background-color: #CBA135; color: #0A0F1C; font-weight: 600; padding: 12px 22px; border-radius: 9999px; display: inline-block; }
-        .btn:hover { background-color: #e0b44f; }
-        .card { background:#121826; border: 1px solid rgba(203,161,53,0.25); }
-        .nav-link { opacity: 0.9; }
-        .nav-link:hover { opacity: 1; }
-        .shadow-soft { box-shadow: 0 8px 30px rgba(0,0,0,0.35); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinezio – услуги кинезиолога</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin: 0;
+      transform: scaleY(0.8); /* буквы ниже на 20% */
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004d40;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    .price {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      padding: 14px 26px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebd5a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #004d40;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-<body class="bg-[#1A2031] text-white">
-    <!-- Навигация -->
-    <header class="fixed top-0 left-0 right-0 bg-[#1A2031]/80 backdrop-blur z-50">
-        <div class="max-w-6xl mx-auto flex items-center justify-between px-5 py-3">
-            <div class="flex items-center gap-3">
-                <img src="logo.png" alt="KINEZIO-I" class="w-10 h-10 rounded-full">
-                <!-- Изменили написание и убрали лишний класс -->
-                <span class="gold font-semibold tracking-wide">Kinezio-i</span>
-            </div>
-            <nav class="space-x-6 text-sm">
-                <a class="nav-link" href="#hero">Главная</a>
-                <a class="nav-link" href="#services">Услуги</a>
-                <a class="nav-link" href="#merci-details">MERCi</a>
-                <a class="nav-link" href="#effective-treatment">Что устраняется</a>
-                <a class="nav-link" href="#prices">Цены</a>
-                <a class="nav-link" href="#contacts">Контакты</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Главная -->
-    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <img src="logo.png" alt="KINEZIO-I логотип" class="w-32 mb-6 shadow-soft rounded-full">
-        <!-- Изменили написание и убрали лишний класс -->
-        <h1 class="text-5xl md:text-6xl gold mb-5">Kinezio-i</h1>
-        <p class="text-lg md:text-xl max-w-2xl opacity-90">
-            Прикладная кинезиология и авторский метод MERCi — путь к жизни без боли, ограничений и хронического стресса.
-        </p>
-        <div class="mt-8 space-x-3">
-            <a href="#services" class="btn">Смотреть услуги</a>
-            <a href="#contacts" class="btn" style="background:#101624;color:#fff;border:1px solid #CBA135;">Записаться</a>
-        </div>
-    </section>
+<body>
 
-    <!-- Услуги -->
-    <section id="services" class="py-20 px-6 bg-[#121826]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl gold text-center mb-12">Услуги</h2>
-            <!-- Используем flexbox для центрирования карточек -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-                <div class="p-6 rounded-2xl card shadow-soft text-center w-full md:w-1/2">
-                    <h3 class="text-2xl gold mb-3" style="font-size: 1.2em;">Офлайн — Барселона</h3>
-                    <p class="opacity-90">
-                        Прикладная кинезиология, рефлекторная коррекция, психологическая, энергетическая кинезиология.
-                    </p>
-                    <p class="opacity-90 mt-4" style="font-size: 1.32em; line-height: 1.8;">
-                        Эти методики помогают не только Устранить Боль,<br>но и вернуть Энергию и Жизненную силу.
-                        <br><br>
-                        – это концентрация лучших практик:
-                    </p>
-                    <ul class="list-disc pl-5 mt-4 opacity-90 mx-auto" style="max-width: 250px; text-align: left; font-size: 1.15em; line-height: 1.8;">
-                        <li>Прикладная Кинезиология,</li>
-                        <li>Рефлексотерапия,</li>
-                        <li>Восточная медицина,</li>
-                        <li>Остеопатия,</li>
-                        <li>Мануальная терапия</li>
-                    </ul>
-                    <p class="opacity-90 mt-2" style="font-size: 1.15em; line-height: 1.8;">для комплексного оздоровления.</p>
-                    <a href="#effective-treatment" class="btn mt-4">Какие проблемы решаем?</a>
-                </div>
-                <div class="p-6 rounded-2xl card shadow-soft text-center w-full md:w-1/2">
-                    <h3 class="text-2xl gold mb-3" style="font-size: 1.2em;">Онлайн — метод MERCi</h3>
-                    <p class="opacity-80 text-sm">Mental Energetic Reflex Correction</p>
-                    <p class="opacity-90 mt-4">
-                        Работа с эмоциональными и подсознательными блоками, болевыми синдромами.
-                    </p>
-                    <p class="opacity-90 mt-4">
-                        MERCi интегрирует принципы квантовой физики: с помощью определенных техник вы "погружаетесь" в состояние, где моё внимание и намерение производят изменения в проблемной части тела и это мгновенно влияет на весь организм и энергетическое поле.
-                    </p>
-                    <a href="#merci-details" class="btn mt-4">Узнать подробнее</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
+  <h1>Kinezio</h1>
+  <nav>
+    <a href="#services">Услуги</a>
+    <a href="#prices">Цены</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
 
-    <!-- Что эффективно устраняется данным методом? -->
-    <section id="effective-treatment" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl gold text-center mb-12">Что эффективно устраняется данным методом?</h2>
-            <div class="card p-6 rounded-2xl shadow-soft max-w-3xl mx-auto">
-                <ul class="list-disc pl-5 text-left opacity-90 space-y-2 mx-auto" style="max-width: 400px;">
-                    <li>Боль в спине, пояснице, шее</li>
-                    <li>Боль в конечностях, суставах</li>
-                    <li>Онемение в конечностях</li>
-                    <li>Протрузии, грыжи</li>
-                    <li>"Вылетевшие позвонки" (сублюксации, имбрикации)</li>
-                    <li>Головная боль, боль в челюсти, копчике (Кранио-сакральная стабилизация Череп, Челюсть, Копчик, Крестец)</li>
-                    <li>Коррекция осанки</li>
-                    <li>Висцеральная стабилизация (работа с внутренними органами)</li>
-                    <li>Меридианная коррекция (Быстрая утомляемость, слабость, холод в конечностях и т.д.)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Подробное описание метода MERCi -->
-    <section id="merci-details" class="py-20 px-6 bg-[#121826]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl gold text-center mb-8">Подробнее о методе "MERCi"</h2>
-            <div class="card p-6 rounded-2xl shadow-soft max-w-4xl mx-auto text-left opacity-90">
-                <h3 class="text-2xl gold mb-4">Квантовые принципы в методе MERCi</h3>
-                <ul class="list-decimal pl-5 space-y-4">
-                    <li>
-                        <strong class="font-semibold">Суперпозиция проблем</strong><br>
-                        Проблема может иметь несколько причин: физиологические и психологические с распределением по долям.
-                        Психологические проблемы могут быть из: родовых программ, прошлых жизней, внешних воздействий и т.п.
-                        Я визуализирую и тестирую все варианты, чтобы найти точный источник блоков.
-                    </li>
-                    <li>
-                        <strong class="font-semibold">Связь тела, сознания и энергии</strong><br>
-                        Тело, сознание и энергия связаны между собой и с найденными причинами.
-                        Изменение в одной части мгновенно отражается на всей системе.
-                    </li>
-                    <li>
-                        <strong class="font-semibold">Наблюдатель и намерение</strong><br>
-                        Эффект зависит от моего внимания и намерения и вашего умения расслабляться и довериться.
-                        Я фокусируюсь на желаемом состоянии, например, легкость, гармония, раскрытие потенциала, и «сворачиваю» негативные сценарии в конкретный позитивный результат через внимание и перепрошивку.
-                    </li>
-                    <li>
-                        <strong class="font-semibold">Информационное поле</strong><br>
-                        Введённая информация распространяется по всему организму как волна.
-                        Визуализация, дыхание и мысленная проекция усиливают интеграцию изменений.
-                    </li>
-                    <li>
-                        <strong class="font-semibold">Закрепление и гармонизация</strong><br>
-                        После работы MERCi синхронизирует тело, ум и энергию.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<section id="services">
+  <h2>Услуги</h2>
 
-    <!-- Цены -->
-    <section id="prices" class="py-20 px-6 bg-[#121826]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl gold text-center mb-12">Цены</h2>
-            <!-- Используем flexbox для центрирования карточек -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-                <div class="p-6 rounded-xl card shadow-soft text-center w-full md:w-1/3">
-                    <h3 class="text-2xl gold mb-2">Разовая сессия</h3>
-                    <p class="opacity-90 mb-4">Онлайн или офлайн</p>
-                    <p class="gold text-3xl font-semibold">€60</p>
-                </div>
-                <div class="p-6 rounded-xl card shadow-soft text-center w-full md:w-1/3">
-                    <h3 class="text-2xl gold mb-2">Пакет 3 сессии</h3>
-                    <p class="opacity-90 mb-4">Глубокая работа</p>
-                    <p class="gold text-3xl font-semibold">€160</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <p>
+    Этот метод помогает не только <strong>устранить боль</strong>,
+    но и вернуть <strong>энергию и жизненную силу</strong>.
+  </p>
 
-    <!-- Контакты -->
-    <section id="contacts" class="py-20 px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-4xl gold text-center mb-8">Контакты</h2>
-            <p class="opacity-90">Запись и вопросы:</p>
-            <div class="mt-6 space-x-4">
-                <a href="https://t.me/34632147183" target="_blank" class="btn">Telegram</a>
-                <a href="https://wa.me/34632147183" target="_blank" class="btn">WhatsApp</a>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto mt-12 w-full">
-            <div class="rounded-xl overflow-hidden shadow-soft">
-                 <!-- Карта с новым местоположением и меткой -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.283186105307!2d2.223067138799573!3d41.42289325699297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDI1JzIyLjQiTiAywrAxMycyMy4xIkU!5e0!3m2!1sen!2sus!4v1672345678901!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Карта расположения центра KINEZIO-I">
-                </iframe>
-            </div>
-        </div>
-    </section>
+  <p>Это концентрация лучших практик:</p>
 
-    <footer class="py-6 text-center text-sm text-gray-400 border-t border-white/10">
-        © 2025 KINEZIO-I. Все права защищены.
-    </footer>
+  <ul>
+    <li>Прикладной кинезиологии</li>
+    <li>Рефлексотерапии</li>
+    <li>Восточной медицины</li>
+    <li>Остеопатии</li>
+    <li>Мануальной терапии</li>
+  </ul>
+
+  <p>
+    <strong>MERCI</strong> — работа с эмоциональными и подсознательными блоками.
+  </p>
+</section>
+
+<section id="prices">
+  <h2>Цены</h2>
+
+  <div class="price">
+    Разовая сессия — 50 €
+  </div>
+
+  <a class="whatsapp-btn" href="https://wa.me/3463214713" target="_blank">
+    Записаться в WhatsApp
+  </a>
+</section>
+
+<section id="contacts">
+  <h2>Контакты</h2>
+  <p>Связь и запись через WhatsApp:</p>
+  <p><strong>+34 632 147 13</strong></p>
+</section>
+
+<footer>
+  © 2025 Kinezio
+</footer>
+
 </body>
 </html>
