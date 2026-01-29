@@ -37,9 +37,9 @@
             </div>
             <nav class="space-x-6 text-sm hidden md:block">
                 <a class="nav-link" href="#hero">Главная</a>
+                <a class="nav-link" href="#effective-treatment">Проблемы</a>
                 <a class="nav-link" href="#services">Услуги</a>
                 <a class="nav-link" href="#merci-details">MERCi</a>
-                <a class="nav-link" href="#effective-treatment">Что устраняется</a>
                 <a class="nav-link" href="#prices">Цены</a>
                 <a class="nav-link" href="#contacts">Контакты</a>
             </nav>
@@ -47,7 +47,7 @@
     </header>
 
     <!-- Главная секция -->
-    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-center text-center px-6 pt-20">
         <img src="logo.png" alt="KINEZIO-I логотип" class="w-32 mb-6 shadow-soft rounded-full">
         <h1 class="text-5xl md:text-6xl gold mb-5">Kinezio-i</h1>
         <p class="text-lg md:text-xl max-w-2xl opacity-90">
@@ -59,8 +59,28 @@
         </div>
     </section>
 
+    <!-- Секция проблем (ПЕРЕНЕСЕНА ВВЕРХ) -->
+    <section id="effective-treatment" class="py-20 px-6 bg-[#121826]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl gold text-center mb-12">С какими проблемами Вы можете обратиться?</h2>
+            <div class="card p-8 rounded-2xl shadow-soft max-w-3xl mx-auto">
+                <ul class="list-disc pl-5 text-left opacity-90 space-y-3 mx-auto max-w-md">
+                    <li>Боль в спине, пояснице, шее</li>
+                    <li>Боль в конечностях, суставах</li>
+                    <li>Онемение в конечностях</li>
+                    <li>Протрузии, грыжи</li>
+                    <li>«Вылетевшие позвонки» (сублюксации)</li>
+                    <li>Головная боль, боль в челюсти, копчике</li>
+                    <li>Коррекция осанки</li>
+                    <li>Висцеральная стабилизация (внутренние органы)</li>
+                    <li>Меридианная коррекция (утомляемость, холод в руках/ногах)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Блок услуг -->
-    <section id="services" class="py-20 px-6 bg-[#121826]">
+    <section id="services" class="py-20 px-6 bg-[#1A2031]">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-4xl gold text-center mb-12">Услуги</h2>
             <div class="flex flex-col md:flex-row items-stretch justify-center gap-8">
@@ -83,7 +103,7 @@
                         <li>Мануальная терапия</li>
                     </ul>
                     <div class="mt-auto pt-6">
-                        <a href="#effective-treatment" class="btn">Какие проблемы решаем?</a>
+                        <a href="#contacts" class="btn">Записаться на прием</a>
                     </div>
                 </div>
                 <!-- Онлайн -->
@@ -100,26 +120,6 @@
                         <a href="#merci-details" class="btn">Узнать подробнее</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция устранения проблем -->
-    <section id="effective-treatment" class="py-20 px-6 bg-[#1A2031]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl gold text-center mb-12">Что эффективно устраняется данным методом?</h2>
-            <div class="card p-8 rounded-2xl shadow-soft max-w-3xl mx-auto">
-                <ul class="list-disc pl-5 text-left opacity-90 space-y-3 mx-auto max-w-md">
-                    <li>Боль в спине, пояснице, шее</li>
-                    <li>Боль в конечностях, суставах</li>
-                    <li>Онемение в конечностях</li>
-                    <li>Протрузии, грыжи</li>
-                    <li>«Вылетевшие позвонки» (сублюксации)</li>
-                    <li>Головная боль, боль в челюсти, копчике</li>
-                    <li>Коррекция осанки</li>
-                    <li>Висцеральная стабилизация (органы)</li>
-                    <li>Меридианная коррекция (утомляемость)</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -152,7 +152,7 @@
         </div>
     </section>
 
-    <!-- Секция цен (ПЕРЕНЕСЕНА ПЕРЕД КОНТАКТАМИ) -->
+    <!-- Секция цен -->
     <section id="prices" class="py-20 px-6 bg-[#1A2031]">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-4xl gold text-center mb-12">Цены</h2>
